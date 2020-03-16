@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | TouchFrame</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="Build/UnityLoader.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+
+  </head>
+  <body>
+    <div class="unity-content">
+      <div id="unity"></div>
+      <div id="uniry-canvas">
+        <!-- Buttons -->
+        <div class="background-button"></div>
+        <div class="prev-button fas fa-chevron-left"></div>
+        <div class="next-button fas fa-chevron-right"></div>
+
+        <!-- Now Loading -->
+        <div class="loading-content">
+          <div id="unity-loading-text" class="loading-text">NOW LOADING</div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-content">
+          <div class="progress">
+            <div id="unity-progress-bar" class="progress-bar bg-info" role="progressbar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

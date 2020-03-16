@@ -1,0 +1,161 @@
+/*
+WebGL
+*/
+
+.unity-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#unity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+WebGL Canvas
+*/
+
+#uniry-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#uniry-canvas .background-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#uniry-canvas .prev-button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform : translateY(-50%);
+  transform : translateY(-50%);
+  padding: 20px;
+  font-size: 30px;
+  color: gray;
+}
+
+#uniry-canvas .next-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform : translateY(-50%);
+  transform : translateY(-50%);
+  padding: 20px;
+  font-size: 30px;
+  color: gray;
+}
+
+/*
+WebGL Canvas - Progress
+*/
+
+#uniry-canvas .progress-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+}
+
+#uniry-canvas .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  #uniry-canvas .progress  {
+    height: 30px;
+  }
+}
+
+/*
+WebGL Canvas - Now Loading
+*/
+
+#uniry-canvas .loading-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff55;
+}
+
+#uniry-canvas .loading-text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform : translateY(-50%);
+  transform : translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: gray;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*
+Modal View
+*/
+
+.ar-modal {
+  z-index: 2;
+  display: none;
+  position: fixed;
+  top: calc((100vh - 90vw) / 2);
+  left: 5vw;
+  width: 90vw;
+  height: 90vw;
+  background-color: black;
+}
+
+@media screen and (min-width: 768px) {
+  .ar-modal {
+    width: 50vh;
+    height: 50vh;
+  }
+}
+
+.modal-overlay {
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.modal-open {
+  color: #00f;
+  text-decoration: underline;
+}
+
+.modal-open:hover {
+  cursor: pointer;
+  color: #f00;
+}
+
+.modal-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
