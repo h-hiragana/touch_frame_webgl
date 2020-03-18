@@ -1,3 +1,5 @@
+var touchFrameDomain = "https://h-hiragana.github.io/touch_frame_webgl/";
+
 // JQuery
 var jquery = document.createElement('script');
 jquery.src = "https://code.jquery.com/jquery-3.4.1.js";
@@ -11,12 +13,12 @@ document.head.appendChild(fontawesome);
 
 // UnityLoader
 var unityLoader = document.createElement('script');
-unityLoader.src = "https://touch-frame.s3-ap-northeast-1.amazonaws.com/demo/webgl/Build/UnityLoader.js";
+unityLoader.src = touchFrameDomain + "Build/UnityLoader.js";
 document.head.appendChild(unityLoader);
 
 // Fontawesome
 var css = document.createElement('link');
-css.href = "https://touch-frame.s3-ap-northeast-1.amazonaws.com/demo/webgl/style.css";
+css.href = touchFrameDomain + "style.css";
 css.rel = "stylesheet";
 document.head.appendChild(css);
 
@@ -53,11 +55,17 @@ window.onload = function() {
         <a rel="ar" href="img/2/3d.usdz">
           <img class="modal-image shadow" src="img/2/img.png">
         </a>
+      </div>
+
+      <div id="ar-modal-3" class="ar-modal">
+        <a rel="ar" href="img/3/3d.usdz">
+          <img class="modal-image shadow" src="img/3/img.png">
+        </a>
       </div>`);
 
   // Unity
   UnityLoader.SystemInfo.mobile = false;
-  var unityInstance = UnityLoader.instantiate("unity", "https://touch-frame.s3-ap-northeast-1.amazonaws.com/demo/webgl/Build/webgl.json", {
+  var unityInstance = UnityLoader.instantiate("unity", touchFrameDomain + "Build/webgl.json", {
     onProgress: function (unity, progress) {
       $("#unity-progress-bar").width((progress * 100) + "%");
     },
