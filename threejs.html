@@ -35,12 +35,13 @@
 
       // 3DS形式のモデルデータを読み込む
       const loader = new THREE.GLTFLoader();
-        // 3dsファイルのパスを指定
-        loader.load('models/gltf/scene.gltf',  (object) => {
+      // 3dsファイルのパスを指定
+      loader.load('models/gltf/scene.gltf',
+      function (gltf) {
         // 読み込み後に3D空間に追加
-        scene.add(object);
+        scene.add(gltf);
       });
-    }
+    };
   </script>
 </head>
 
