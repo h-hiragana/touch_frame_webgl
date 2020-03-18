@@ -30,6 +30,7 @@
       const loader = new THREE.GLTFLoader();
       loader.load('models/gltf/scene.gltf',
       function (gltf) {
+        gltf.scene.scale.set(10, 10, 10);
         scene.add(gltf.scene);
       });
 
@@ -39,6 +40,8 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setClearColor(0xeeeeee, 1);
       document.body.appendChild(renderer.domElement);
+      renderer.gammaOutput = true;
+      renderer.gammaFactor = 2.2;
       renderer.render(scene, camera);
     });
   </script>
