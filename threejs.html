@@ -34,11 +34,11 @@
       camera.position.set(0, 0, +10);
 
       // 3DS形式のモデルデータを読み込む
-      const loader = new THREE.FBXLoader();
+      const loader = new THREE.GLTFLoader();
         // // テクスチャーのパスを指定
         // loader.setPath('models/textures/');
         // 3dsファイルのパスを指定
-        loader.load('models/BigBagAssembly_SketchFab.fbx',  (object) => {
+        loader.load('models/gltf/backpack.gltf',  (object) => {
         // 読み込み後に3D空間に追加
         scene.add(object);
       });
